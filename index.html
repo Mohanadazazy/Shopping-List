@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <div class="container">
+        <label for="productName" class="pb-2"> Product Name :</label>
+        <input type="text" id="productName" class="form-control " placeholder="ProductName">
+        <div id="productNameAlert" class="alert alert-danger mt-1 d-none">
+            <ul class="p-0 m-0 ps-5">
+                <li>Product name must start with Capital letter</li>
+                <li>Product name must be more than 2 letters</li>
+                <li>Product name must be less than 8 letters</li>
+            </ul>
+        </div>
+        <label for="productPrice" class="pt-4 pb-2"><i class="fa-solid fa-link"></i> Product Price :</label>
+        <input type="number" id="productPrice" class="form-control" placeholder="ProductPrice">
+        <div id="productPriceAlert" class="alert alert-danger mt-1 d-none">
+            <ul class="p-0 m-0 ps-5">
+                <li>Product Price must start with any digits except 0</li>
+                <li>Product name must be more than 3 digits</li>
+                <li>Product name must be less than 7 digits</li>
+            </ul>
+        </div>
+        <label for="productCate" class="pt-4 pb-2"><i class="fa-solid fa-link"></i>Category :</label>
+        <input type="text" id="productCate" class="form-control" placeholder="ProductCategory">
+        <div id="productCateAlert" class="alert alert-danger mt-1 d-none">
+            <ul class="p-0 m-0 ps-5">
+                <li>Product name must start with Capital letter</li>
+                <li>Product name must be more than 2 letters</li>
+                <li>Product name must be less than 9 letters</li>
+            </ul>
+        </div>
+        <label for="Desc" class="pt-4 pb-2"><i class="fa-solid fa-link"></i>ProductDesc :</label>
+        <textarea type="text" id="Desc" class="form-control" placeholder="ProductDesc."></textarea>
+        <div id="productDescAlert" class="alert alert-danger mt-1 d-none">
+            <ul class="p-0 m-0 ps-5">
+                <li>Product name must be more than 4 Characters</li>
+                <li>Product name must be less than 80 Characters</li>
+            </ul>
+        </div>
+        <div class="btns text-center justify-content-center mb-4">
+            <button onclick="addUpdateProduct()" class="btn btn-danger px-5  mt-3 text-white mb-3" id="submitBtn">Add Product</button>
+        </div>
+        <input onkeyup="searchElement();" type="text" class="form-control" placeholder="Search" id="search">
+        <hr>
+        <div class="table">
+            <table class="table bg-light text-center">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>product Name</th>
+                        <th>product Price</th>
+                        <th>Category</th>
+                        <th>product Desc</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="Tablebody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
